@@ -1,8 +1,7 @@
-baseURL = "https://hugo-theme-anubis2.netlify.app/"
+baseURL = "https://murtazavasi.github.io/weblog/"
 languageCode = "en-us"
 theme = "anubis2"
 title = "Murtaza Vasi Blog"
-canonifyURLs = true
 
 [author]
 name = "Murtaza Vasi"

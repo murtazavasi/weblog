@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Murtaza Vasi Blog</title>
-    <link>/</link>
+    <link>/weblog/</link>
     <description>Murtaza Vasi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 May 2024 15:53:30 +0530</lastBuildDate>
     
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/weblog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Monolithic vs Containerized Applications</title>
-      <link>/articles/monolithic-vs-containerized-applications/</link>
+      <link>/weblog/articles/monolithic-vs-containerized-applications/</link>
       <pubDate>Sun, 19 May 2024 15:53:30 +0530</pubDate>
       
-      <guid>/articles/monolithic-vs-containerized-applications/</guid>
+      <guid>/weblog/articles/monolithic-vs-containerized-applications/</guid>
       <description>&lt;p&gt;Nowadays, for developing applications, there are the following two major approaches (apart from these also approaches are there):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Monolithic Architecture (Monolith)&lt;/li&gt;
@@ -92,7 +92,7 @@
 &lt;li&gt;&lt;strong&gt;Steeper learning curve:&lt;/strong&gt; Turning your entire application to microservices requires some insight into containerization and the technologies that might be used to deploy the containers majorly docker, containerd, etc. These technologies take a while to learn by the developers and can increase the time taken for development and deployment.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Testing and Debugging:&lt;/strong&gt; Having a microservice-based application can be much more difficult to test as well as debug since the application will have many microservices; so pointing out the exact issue of what went wrong can be tricky.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/monolithic-vs-containerized-applications/monolithic-vs-microservice.png&#34; alt=&#34;monolithic-vs-microservice.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/weblog/images/monolithic-vs-containerized-applications/monolithic-vs-microservice.png&#34; alt=&#34;monolithic-vs-microservice.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;monolithic-architecture-vs-microservices-architecture&#34; &gt;
 &lt;div&gt;
     &lt;a href=&#34;#monolithic-architecture-vs-microservices-architecture&#34;&gt;
@@ -156,10 +156,10 @@
     
     <item>
       <title>Networking in Kubernetes</title>
-      <link>/articles/networking-in-kubernetes/</link>
+      <link>/weblog/articles/networking-in-kubernetes/</link>
       <pubDate>Sun, 19 May 2024 14:27:32 +0530</pubDate>
       
-      <guid>/articles/networking-in-kubernetes/</guid>
+      <guid>/weblog/articles/networking-in-kubernetes/</guid>
       <description>&lt;p&gt;In kubernetes, when we deploy an application, our end goal is for the end customer to be able to access that application in some way or form though the internet. Since the kubernetes clusters can get pretty complex, pretty fast sometimes it might be difficult to understand why a particular issue has risen. To deepen the knowledge on Networking in Kubernetes, in today’s blog post lets go over the end to end flow from how a request is generated in the client’s browser and how it reaches it’s the application i.e. the pod running on the cluster.&lt;/p&gt;
 &lt;h2 id=&#34;exposing-an-application-to-the-internet&#34; &gt;
 &lt;div&gt;
@@ -177,12 +177,12 @@
 &lt;/ol&gt;
 &lt;p&gt;Lets talk about each method in brief&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Via NodePort Service:&lt;/strong&gt; An application can be deployed and exposed to the internet via a NodePort Service in kubernetes which will expose the application at a particular port on that node.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/NodePort_Service.png&#34; alt=&#34;NodePort Service.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/weblog/images/NodePort_Service.png&#34; alt=&#34;NodePort Service.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;For instance if the pod, housing the application is running on a node with IP 10.1.1.1 and 10.1.1.2 then if we create a nodeport service for the application then that application can be accessed using the &lt;code&gt;IP:Port&lt;/code&gt; where IP is 10.1.1.1 or 10.1.1.2 and Port is the NodePort that is exposed (It will be between 30000 to 32767).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Via Load Balancer Service&lt;/strong&gt;: Using this method we just need to create a load balancer type of service for our application and if we have a cluster running in the cloud then a load balancer will be automatically created in it with a public ip via which we can access the application&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Load_Balancer_Service.png&#34; alt=&#34;Load Balancer Service.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/weblog/images/Load_Balancer_Service.png&#34; alt=&#34;Load Balancer Service.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Via Ingress Controller&lt;/strong&gt;: This method requires a bit of setup but it has its advantages and in industries this is the preferred method to access an application. One of the main advantages of using an Ingress Controller over using Load Balancer Service is that for larger clusters that use more number of load balancers services the number of load balancers will increase which will drive up the cost in a cloud environment. For exposing an application using an ingress controller we can use any ingress controller the most used nginx is an option to try with. Once that is deployed we can use an ingress resource to expose our application to the internet.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Ingress_Controller.png&#34; alt=&#34;Ingress Controller.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/weblog/images/Ingress_Controller.png&#34; alt=&#34;Ingress Controller.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;assumption&#34; &gt;
 &lt;div&gt;
     &lt;a href=&#34;#assumption&#34;&gt;
@@ -201,7 +201,7 @@
 &lt;/div&gt;
 &lt;/h2&gt;
 &lt;p&gt;When a client hits &lt;code&gt;[test.example.com](http://test.example.com)&lt;/code&gt; in the browser then first and foremost DNS resolution happens for the domain which is a fancy way of saying that the domain gets resolved to an IP address. This IP that we get (in our case) is for the Ingress Controller’s Load Balancer this request is then forwarded to the Nginx Pod (that is the backend service for the ingress controller) this pod will basically perform a check to see where it needs to forward the incoming request. Once the nginx pod finds the pod it needs to forward the traffic to then the request is forwarded to the application backend.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Request_Flow.png&#34; alt=&#34;Request Flow.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/weblog/images/Request_Flow.png&#34; alt=&#34;Request Flow.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34; &gt;
 &lt;div&gt;
     &lt;a href=&#34;#conclusion&#34;&gt;
