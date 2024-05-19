@@ -1,14 +1,230 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anubis2 Demo Site</title>
+    <title>Murtaza Vasi Blog</title>
     <link>/</link>
-    <description>Anubis2 Demo Site</description>
+    <description>Murtaza Vasi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 19 May 2024 15:53:30 +0530</lastBuildDate>
     
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Monolithic vs Containerized Applications</title>
+      <link>/articles/monolithic-vs-containerized-applications/</link>
+      <pubDate>Sun, 19 May 2024 15:53:30 +0530</pubDate>
+      
+      <guid>/articles/monolithic-vs-containerized-applications/</guid>
+      <description>&lt;p&gt;Nowadays, for developing applications, there are the following two major approaches (apart from these also approaches are there):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monolithic Architecture (Monolith)&lt;/li&gt;
+&lt;li&gt;Microservice Architecture (Containerized)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What are these two developing approaches? How to decide which one is for you?&lt;/p&gt;
+&lt;h2 id=&#34;what-is-monolithic-architecture&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#what-is-monolithic-architecture&#34;&gt;
+        #
+    &lt;/a&gt;
+    What is monolithic architecture ?
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;Monolithic architecture (Monolith) generally means developing an application which is tightly coupled meaning the frontend, backend and configuration that is required by the application to run is all present in one codebase. For example consider developing an E-Commerce website, it will have several components in the website like the frontend (UI of the website), the backend, also many services like fetching list of products, users, orders, making payments, analyzing services etc. All of these components will be present in a singular codebase.&lt;/p&gt;
+&lt;h3 id=&#34;pros&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#pros&#34;&gt;
+        ##
+    &lt;/a&gt;
+    Pros
+&lt;/div&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lesser learning curve:&lt;/strong&gt; Applications built using monolithic architecture are easier to get built since for development you don’t need much know-how. This might be a good option for startups and individuals who don’t want to spend much time gaining knowledge on microservices and just want to get the application up and running.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quicker to develop:&lt;/strong&gt; Since the monolithic-based applications have a single codebase it is much quicker to get up and running as compared to going with the microservice-based approach.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cons&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#cons&#34;&gt;
+        ##
+    &lt;/a&gt;
+    Cons
+&lt;/div&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty in scaling:&lt;/strong&gt; Being one codebase if we want to scale the application we have no choice but to scale the entire application even if we just want to scale any specific component.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resilience:&lt;/strong&gt; In a monolithic-based application if something goes wrong the entire application goes down. This is not an ideal solution if you want your application to be highly available.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost:&lt;/strong&gt; This might be an important factor for many individuals, but since the codebase is a single entity scaling the application would mean scaling the entire application so cost might increase as compared to the microservice architecture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-microservice-architecture&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#what-is-microservice-architecture&#34;&gt;
+        #
+    &lt;/a&gt;
+    &lt;strong&gt;What is Microservice Architecture?&lt;/strong&gt;
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;Microservice architecture involves having the application code divided into different components each handling (ideally) only one function. If we take the same example of a website we can have the frontend of the website as a microservice, backend as a separate microservice, etc. All of these microservices need to be independent of each other and can also be developed using different languages or frameworks.&lt;/p&gt;
+&lt;h3 id=&#34;pros-1&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#pros-1&#34;&gt;
+        ##
+    &lt;/a&gt;
+    Pros
+&lt;/div&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; Since the application is divided into separate services, if we want to scale just a specific service or component of the application we can do that. This provides flexibility as well as reduces the cost of deployment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resilience:&lt;/strong&gt; In case something goes wrong with the application, only the particular service that is affected will go down apart from that the application will still be available.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexibility:&lt;/strong&gt; Having segregated applications into containers gives developers more flexibility to choose the technology for developing each service.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost:&lt;/strong&gt; Having an application deployed in microservice architecture gives us the flexibility to scale just the parts we need and keep the other parts of the application untouched. This can reduce the cost of having the application deployed as compared to monolithic applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cons-1&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#cons-1&#34;&gt;
+        ##
+    &lt;/a&gt;
+    Cons
+&lt;/div&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Steeper learning curve:&lt;/strong&gt; Turning your entire application to microservices requires some insight into containerization and the technologies that might be used to deploy the containers majorly docker, containerd, etc. These technologies take a while to learn by the developers and can increase the time taken for development and deployment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testing and Debugging:&lt;/strong&gt; Having a microservice-based application can be much more difficult to test as well as debug since the application will have many microservices; so pointing out the exact issue of what went wrong can be tricky.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/monolithic-vs-containerized-applications/monolithic-vs-microservice.png&#34; alt=&#34;monolithic-vs-microservice.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;monolithic-architecture-vs-microservices-architecture&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#monolithic-architecture-vs-microservices-architecture&#34;&gt;
+        #
+    &lt;/a&gt;
+    Monolithic Architecture VS Microservices Architecture
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Monolithic Architecture&lt;/th&gt;
+&lt;th&gt;Microservice Architecture&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Complexity to use&lt;/td&gt;
+&lt;td&gt;Easy to get up and running&lt;/td&gt;
+&lt;td&gt;Requires more technical knowledge&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Scalability&lt;/td&gt;
+&lt;td&gt;Difficult to scale&lt;/td&gt;
+&lt;td&gt;Easier to scale&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Resilience&lt;/td&gt;
+&lt;td&gt;Less resilient&lt;/td&gt;
+&lt;td&gt;More resilient&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cost&lt;/td&gt;
+&lt;td&gt;More deployment cost&lt;/td&gt;
+&lt;td&gt;Lower deployment cost&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technology Usage&lt;/td&gt;
+&lt;td&gt;Difficult to change technology used&lt;/td&gt;
+&lt;td&gt;Different microservices can have different technologies used&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;how-to-choose-between-the-monolithic-and-microservice-architecture&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#how-to-choose-between-the-monolithic-and-microservice-architecture&#34;&gt;
+        #
+    &lt;/a&gt;
+    How to choose between the monolithic and microservice architecture?
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;Both architectures for building applications have their own place. For deciding on the architecture keep in mind the following points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Application Complexity:&lt;/strong&gt; Application complexity plays a significant role in deciding the architecture you want to go for. If the application is relatively simple and small going with the monolithic architecture might be a good choice; on the other hand, if the app is complex and has a lot of moving parts it&amp;rsquo;s better to stick with the microservice-based architecture due to its benefits.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Team Size:&lt;/strong&gt; If the team is small and doesn’t have experience working with microservice-based applications then going with the microservice-based approach might be a bad decision. If the team has some experience working with microservice-based applications then it might be a good choice to go with the microservice approach.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time to develop:&lt;/strong&gt; As you might have guessed since we have all components tightly coupled in a monolith application it will take less time to develop, test, and deploy the app compared to a more complex loosely coupled microservice approach.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Networking in Kubernetes</title>
+      <link>/articles/networking-in-kubernetes/</link>
+      <pubDate>Sun, 19 May 2024 14:27:32 +0530</pubDate>
+      
+      <guid>/articles/networking-in-kubernetes/</guid>
+      <description>&lt;p&gt;In kubernetes, when we deploy an application, our end goal is for the end customer to be able to access that application in some way or form though the internet. Since the kubernetes clusters can get pretty complex, pretty fast sometimes it might be difficult to understand why a particular issue has risen. To deepen the knowledge on Networking in Kubernetes, in today’s blog post lets go over the end to end flow from how a request is generated in the client’s browser and how it reaches it’s the application i.e. the pod running on the cluster.&lt;/p&gt;
+&lt;h2 id=&#34;exposing-an-application-to-the-internet&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#exposing-an-application-to-the-internet&#34;&gt;
+        #
+    &lt;/a&gt;
+    Exposing an application to the Internet
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;An application can be exposed to the internet by using couple of methods which we will briefly talk about here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Via NodePort Service&lt;/li&gt;
+&lt;li&gt;Via Load Balancer Service&lt;/li&gt;
+&lt;li&gt;Via an Ingress Controller&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Lets talk about each method in brief&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Via NodePort Service:&lt;/strong&gt; An application can be deployed and exposed to the internet via a NodePort Service in kubernetes which will expose the application at a particular port on that node.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/NodePort_Service.png&#34; alt=&#34;NodePort Service.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For instance if the pod, housing the application is running on a node with IP 10.1.1.1 and 10.1.1.2 then if we create a nodeport service for the application then that application can be accessed using the &lt;code&gt;IP:Port&lt;/code&gt; where IP is 10.1.1.1 or 10.1.1.2 and Port is the NodePort that is exposed (It will be between 30000 to 32767).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Via Load Balancer Service&lt;/strong&gt;: Using this method we just need to create a load balancer type of service for our application and if we have a cluster running in the cloud then a load balancer will be automatically created in it with a public ip via which we can access the application&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Load_Balancer_Service.png&#34; alt=&#34;Load Balancer Service.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Via Ingress Controller&lt;/strong&gt;: This method requires a bit of setup but it has its advantages and in industries this is the preferred method to access an application. One of the main advantages of using an Ingress Controller over using Load Balancer Service is that for larger clusters that use more number of load balancers services the number of load balancers will increase which will drive up the cost in a cloud environment. For exposing an application using an ingress controller we can use any ingress controller the most used nginx is an option to try with. Once that is deployed we can use an ingress resource to expose our application to the internet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Ingress_Controller.png&#34; alt=&#34;Ingress Controller.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;assumption&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#assumption&#34;&gt;
+        #
+    &lt;/a&gt;
+    Assumption
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;For understanding the end to end flow of how a request reaches an application deployed in a cluster, let’s first assume a couple of things to help us in understanding the flow. First the application is deployed in a kubernetes cluster deployed in cloud and is exposed to the internet using an Ingress resource with nginx as our Ingress Controller. The domain that the user needs to use for accessing the application is &lt;code&gt;test.example.com&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;flow-of-a-request&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#flow-of-a-request&#34;&gt;
+        #
+    &lt;/a&gt;
+    Flow of a Request
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;When a client hits &lt;code&gt;[test.example.com](http://test.example.com)&lt;/code&gt; in the browser then first and foremost DNS resolution happens for the domain which is a fancy way of saying that the domain gets resolved to an IP address. This IP that we get (in our case) is for the Ingress Controller’s Load Balancer this request is then forwarded to the Nginx Pod (that is the backend service for the ingress controller) this pod will basically perform a check to see where it needs to forward the incoming request. Once the nginx pod finds the pod it needs to forward the traffic to then the request is forwarded to the application backend.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/Request_Flow.png&#34; alt=&#34;Request Flow.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#conclusion&#34;&gt;
+        #
+    &lt;/a&gt;
+    Conclusion
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;p&gt;In conclusion, understanding how networking works in Kubernetes is crucial for managing applications effectively. Knowing the journey of a request from the client&amp;rsquo;s browser to the application pod running on the cluster can help troubleshoot issues and optimize performance. Whether you choose to expose your application through NodePort Service, Load Balancer Service, or an Ingress Controller, each method has its own advantages and suitable use cases. By leveraging these insights, you can ensure that your applications are accessible and running efficiently, providing a seamless experience for your end-users.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34; &gt;
+&lt;div&gt;
+    &lt;a href=&#34;#references&#34;&gt;
+        #
+    &lt;/a&gt;
+    References
+&lt;/div&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@seanlinsanity/how-to-expose-applications-running-in-kubernetes-cluster-to-public-access-65c2fa959a3b#:~:text=In%20Kubernetes%2C%20a%20NodePort%20service,is%20known%20as%20the%20NodePort&#34;&gt;https://medium.com/@seanlinsanity/how-to-expose-applications-running-in-kubernetes-cluster-to-public-access-65c2fa959a3b&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://betterprogramming.pub/north-south-communication-in-kubernetes-how-does-a-client-talk-to-a-service-inside-a-cluster-8af8b27dbb9&#34;&gt;https://betterprogramming.pub/north-south-communication-in-kubernetes-how-does-a-client-talk-to-a-service-inside-a-cluster-8af8b27dbb9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

@@ -1,10 +1,27 @@
 baseURL = "https://hugo-theme-anubis2.netlify.app/"
 languageCode = "en-us"
 theme = "anubis2"
-title = "Anubis2 Demo Site"
+title = "Murtaza Vasi Blog"
 
 [author]
 name = "Murtaza Vasi"
+
+[permalinks]
+  [permalinks.page]
+    posts = '/articles/:slug'
+  [permalinks.section]
+    posts = '/articles/'
+
+[params]
+social = [
+  { id="github", name="murtazavasi" },
+  { id="linkedin", url="https://www.linkedin.com/in/murtaza-vasi/" },
+  { id="medium", url="https://www.medium.com/@murtazavasi.dev"},
+  { id="twitter", url="https://www.twitter.com/@VasiMurtaza"}
+]
+
+rssIcon = false
+tag = "tags"
 
 [markup.goldmark.renderer]
 unsafe = true # true | false; Enable unsafe mode to have a better experience
