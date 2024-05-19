@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+        <loc>http://localhost:1313/tags/microservice-architecture/</loc>
+        <lastmod>2024-05-19T15:53:30+05:30</lastmod>
+      </url><url>
+        <loc>http://localhost:1313/tags/monolithic-architecture/</loc>
+        <lastmod>2024-05-19T15:53:30+05:30</lastmod>
+      </url><url>
         <loc>http://localhost:1313/articles/monolithic-vs-containerized-applications/</loc>
         <lastmod>2024-05-19T15:53:30+05:30</lastmod>
       </url><url>
@@ -11,11 +17,27 @@
         <loc>http://localhost:1313/articles/</loc>
         <lastmod>2024-05-19T15:53:30+05:30</lastmod>
       </url><url>
+        <loc>http://localhost:1313/tags/</loc>
+        <lastmod>2024-05-19T15:53:30+05:30</lastmod>
+      </url><url>
+        <loc>http://localhost:1313/tags/cluster-ip-service/</loc>
+        <lastmod>2024-05-19T14:27:32+05:30</lastmod>
+      </url><url>
+        <loc>http://localhost:1313/tags/load-balancer-service/</loc>
+        <lastmod>2024-05-19T14:27:32+05:30</lastmod>
+      </url><url>
+        <loc>http://localhost:1313/tags/networking/</loc>
+        <lastmod>2024-05-19T14:27:32+05:30</lastmod>
+      </url><url>
         <loc>http://localhost:1313/articles/networking-in-kubernetes/</loc>
         <lastmod>2024-05-19T14:27:32+05:30</lastmod>
       </url><url>
-        <loc>http://localhost:1313/categories/</loc>
+        <loc>http://localhost:1313/tags/nginx-ingress-controller/</loc>
+        <lastmod>2024-05-19T14:27:32+05:30</lastmod>
       </url><url>
-        <loc>http://localhost:1313/tags/</loc>
+        <loc>http://localhost:1313/tags/node-port-service/</loc>
+        <lastmod>2024-05-19T14:27:32+05:30</lastmod>
+      </url><url>
+        <loc>http://localhost:1313/categories/</loc>
       </url>
 </urlset>
