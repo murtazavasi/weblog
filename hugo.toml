@@ -1,3 +1,13 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://hugo-theme-anubis2.netlify.app/"
+languageCode = "en-us"
+theme = "anubis2"
+title = "Anubis2 Demo Site"
+
+[author]
+name = "Murtaza Vasi"
+
+[markup.goldmark.renderer]
+unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
